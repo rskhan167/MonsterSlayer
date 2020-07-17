@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Slayer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h4>{{ text }}</h4>
+        <section class="row">
+            <div class="column">
+                <h2>Player</h2>
+                <div class="healthbar">
+                    <div class="healthbar textcenter" style="background-color: green; margin: 0; color: white;"></div>
+                </div>
+            </div>
+            <div class="column">
+                <h2>Monster</h2>
+                <div class="healthbar">
+                    <div class="healthbar textcenter" style="background-color: green; margin: 0; color: white;"></div>
+                </div>
+            </div>
+        </section>
+        <section class="row controls">
+            <div class="small-12 columns">
+                <button id="start-game" @click="startGame()">START NEW GAME</button>
+            </div>
+        </section>
+        <section class="row controls">
+            <div class="small-12 columns">
+                <button id="attack" @click="attack()">ATTACK</button>
+                <button id="special-attack" @click="specialAttack()">SPECIAL ATTACK</button>
+                <button id="heal" @click="heal()">HEAL</button>
+                <button id="give-up" @click="giveUp()">GIVE UP</button>
+            </div>
+        </section>
+        <section class="row log">
+            <div class="small-12 columns">
+                <ul>
+                    <li>
+                        
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
