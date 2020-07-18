@@ -9,28 +9,36 @@
 </head>
 <body>
     <div id="app">
-        <h4>{{ text }}</h4>
+        <h4 class="textcenter">{{ text }}</h4>
         <section class="row">
             <div class="column">
-                <h2>Player</h2>
+                <h2 class="textcenter">Player</h2>
                 <div class="healthbar">
-                    <div class="healthbar textcenter" style="background-color: green; margin: 0; color: white;"></div>
+                    <div class="healthbar textcenter" 
+                         style="background-color: green; margin: 0; color: white;"
+                         :style="{width: playerHealth + '%'}">
+                         {{ playerHealth }}
+                    </div>
                 </div>
             </div>
             <div class="column">
-                <h2>Monster</h2>
+                <h2 class="textcenter">Monster</h2>
                 <div class="healthbar">
-                    <div class="healthbar textcenter" style="background-color: green; margin: 0; color: white;"></div>
+                    <div class="healthbar textcenter" 
+                         style="background-color: green; margin: 0; color: white;"
+                         :style="{width: monsterHealth + '%'}">
+                        {{ monsterHealth }}
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="row controls">
-            <div class="small-12 columns">
+        <section class="row controls" v-if="!gameIsRunning">
+            <div class="small-12 column">
                 <button id="start-game" @click="startGame()">START NEW GAME</button>
             </div>
         </section>
-        <section class="row controls">
-            <div class="small-12 columns">
+        <section class="row controls" v-else>
+            <div class="small-12 column">
                 <button id="attack" @click="attack()">ATTACK</button>
                 <button id="special-attack" @click="specialAttack()">SPECIAL ATTACK</button>
                 <button id="heal" @click="heal()">HEAL</button>
