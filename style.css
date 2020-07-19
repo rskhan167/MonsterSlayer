@@ -1,4 +1,4 @@
-.textcenter{
+ .textcenter{
     text-align: center;
 }
 .row{
@@ -32,6 +32,35 @@ button {
     box-shadow: 0 1px 1px black;
     margin: 10px;
 }
+
+.turn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.log ul{
+    list-style: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.log ul li{
+    margin: 5px;
+}
+
+.log ul .player-turn {
+    color: blue;
+    background-color: #e4e8ff;
+}
+
+.log ul .monster-turn {
+    color: red;
+    background-color: #ffc0c1;
+}
+
 
 #start-game {
     background-color: #aaffb0;
