@@ -1,2 +1,2 @@
 # MonsterSlayer
-A Vuejs project.
+This is a Vuejs project.
